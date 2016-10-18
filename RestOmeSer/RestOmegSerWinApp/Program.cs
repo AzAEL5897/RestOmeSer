@@ -16,7 +16,7 @@ namespace RestOmegSerWinApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }
