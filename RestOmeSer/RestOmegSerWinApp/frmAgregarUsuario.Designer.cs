@@ -1,6 +1,6 @@
 ﻿namespace RestOmegSerWinApp
 {
-    partial class AgregarUsuario
+    partial class frmAgregarUsuario
     {
         /// <summary>
         /// Required designer variable.

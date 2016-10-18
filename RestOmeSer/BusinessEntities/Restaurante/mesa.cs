@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities.Restaurante
 {
-    class mesa
+  public class mesa
     {
 
         private int id;

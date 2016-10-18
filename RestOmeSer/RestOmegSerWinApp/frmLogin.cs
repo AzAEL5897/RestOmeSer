@@ -24,19 +24,19 @@ namespace RestOmegSerWinApp
             {
                 if(txtContraseña.Text == "12345678")
                 {
-                    MessageBox.Show("Bienvenido al Restaurante Orinoco's");
+                    MessageBox.Show("BIENVENIDO AL RESTAURANTE ORINOCO'S");
                     frmMenu Menu = new frmMenu();
                     Menu.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Contraseña Incorrecto");
+                    MessageBox.Show("CONTRASEÑA INCORRECTA, PORFAVOR VERIFIQUE SUS DATOS");
                 }
             }
             else
             {
-                MessageBox.Show("Usuario Incorrecto");
+                MessageBox.Show("USUARIO INCORRECTO, PORFAVOR VERIFIQUE SUS DATOS");
             }
           
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RestOmegSerWinApp
 {
-    public partial class AgregarUsuario : Form
+    public partial class frmAgregarUsuario : Form
     {
-        public AgregarUsuario()
+        public frmAgregarUsuario()
         {
             InitializeComponent();
         }

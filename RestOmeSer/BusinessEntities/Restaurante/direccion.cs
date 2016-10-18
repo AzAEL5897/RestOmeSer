@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities.Restaurante
 {
-    class direccion
+   public class direccion
     {
         private int id;
         private string numero;

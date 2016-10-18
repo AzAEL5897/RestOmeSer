@@ -48,9 +48,9 @@
     <Compile Include="Restaurante\CatProducto.cs" />
     <Compile Include="Restaurante\clienteFrecuente.cs" />
     <Compile Include="Restaurante\direccion.cs" />
-    <Compile Include="Restaurante\ingredientes.cs" />
+    <Compile Include="Restaurante\ingrediente.cs" />
     <Compile Include="Restaurante\mesa.cs" />
-    <Compile Include="Restaurante\productos.cs" />
+    <Compile Include="Restaurante\producto.cs" />
     <Compile Include="Restaurante\reservaMesa.cs" />
     <Compile Include="Restaurante\roles.cs" />
     <Compile Include="Restaurante\statusMesa.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities.Restaurante
 {
-    class CatCliente
+    public class CatCliente
     {
 
         private int id;

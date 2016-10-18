@@ -19,7 +19,7 @@ namespace RestOmegSerWinApp
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AgregarUsuario AgUsu = new AgregarUsuario();
+            frmAgregarUsuario AgUsu = new frmAgregarUsuario();
             AgUsu.Show();
             this.Close();
         }

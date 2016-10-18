@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities.Restaurante
 {
-    class usuario
+   public class usuario
     {
         private int id;
         private string nombe;
