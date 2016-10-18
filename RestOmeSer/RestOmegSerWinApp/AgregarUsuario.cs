@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace RestOmegSerWinApp
 {
-    public partial class frmMenu : Form
+    public partial class AgregarUsuario : Form
     {
-        public frmMenu()
+        public AgregarUsuario()
         {
             InitializeComponent();
-        }
-
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarUsuario AgUsu = new AgregarUsuario();
-            AgUsu.Show();
-            this.Close();
         }
     }
 }
