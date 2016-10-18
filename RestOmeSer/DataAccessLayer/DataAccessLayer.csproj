@@ -45,6 +45,17 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurante\CatClienteDAL.cs" />
+    <Compile Include="Restaurante\CatProductoDAL.cs" />
+    <Compile Include="Restaurante\clienteFrecuenteDAL.cs" />
+    <Compile Include="Restaurante\direccionDAL.cs" />
+    <Compile Include="Restaurante\ingredienteDAL.cs" />
+    <Compile Include="Restaurante\mesaDAL.cs" />
+    <Compile Include="Restaurante\productoDAL.cs" />
+    <Compile Include="Restaurante\reservaMesaDAL.cs" />
+    <Compile Include="Restaurante\rolDAL.cs" />
+    <Compile Include="Restaurante\statuMesaDAL.cs" />
+    <Compile Include="Restaurante\usuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

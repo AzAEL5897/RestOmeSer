@@ -52,8 +52,8 @@
     <Compile Include="Restaurante\mesa.cs" />
     <Compile Include="Restaurante\producto.cs" />
     <Compile Include="Restaurante\reservaMesa.cs" />
-    <Compile Include="Restaurante\roles.cs" />
-    <Compile Include="Restaurante\statusMesa.cs" />
+    <Compile Include="Restaurante\rol.cs" />
+    <Compile Include="Restaurante\statuMesa.cs" />
     <Compile Include="Restaurante\usuario.cs" />
   </ItemGroup>
   <ItemGroup>
