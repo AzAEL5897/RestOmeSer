@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace RestOmeSerWinApp
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+            timerFechaHora.Enabled = true;
+        }
+
+        private void timerFechaHora_Tick(object sender, EventArgs e)
+        {
+            lblFechaHora.Text = DateTime.Now.ToString();
         }
     }
 }
