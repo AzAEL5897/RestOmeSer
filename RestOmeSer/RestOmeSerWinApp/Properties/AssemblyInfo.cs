@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("RestOmegSerWinApp")]
+[assembly: AssemblyTitle("RestOmeSerWinApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("RestOmegSerWinApp")]
+[assembly: AssemblyProduct("RestOmeSerWinApp")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("507b2319-1a9f-4ca2-b5ee-4d0d230538ee")]
+[assembly: Guid("6eb9d1ea-c7f7-4140-ae1d-3aa1cd561f81")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestOmegSerWinApp.Properties
+namespace RestOmeSerWinApp.Properties
 {
 
 
