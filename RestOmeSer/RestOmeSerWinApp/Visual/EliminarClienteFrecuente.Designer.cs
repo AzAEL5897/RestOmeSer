@@ -28,11 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btneleiminar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(122, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "                                        ";
+            // 
+            // btneleiminar
+            // 
+            this.btneleiminar.Location = new System.Drawing.Point(350, 34);
+            this.btneleiminar.Name = "btneleiminar";
+            this.btneleiminar.Size = new System.Drawing.Size(75, 23);
+            this.btneleiminar.TabIndex = 9;
+            this.btneleiminar.Text = "eliminar";
+            this.btneleiminar.UseVisualStyleBackColor = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(125, 38);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(170, 20);
+            this.txtNombre.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Usuario ";
+            // 
+            // EliminarClienteFrecuente
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(496, 148);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btneleiminar);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label1);
+            this.Name = "EliminarClienteFrecuente";
             this.Text = "EliminarClienteFrecuente";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btneleiminar;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label1;
     }
 }
