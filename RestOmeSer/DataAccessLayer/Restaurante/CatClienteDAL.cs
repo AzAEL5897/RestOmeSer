@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using DataAccessLayer.baseDatos;
+using DataAccessLayer.Restaurante;
+using BusinessEntities.Restaurante;
 
 namespace DataAccessLayer.Restaurante
 {
     class CatClienteDAL
     {
         conexion conexion = new conexion();
-        public List<catCliente> seleccionarCatCliente()
+        public List<CatCliente> seleccionarCatCliente()
         {
-            List<catCliente> listacatCliente = new List<catCliente>();
+            List<CatCliente> listacatCliente = new List<CatCliente>();
 
             SqlCommand Comando = new SqlCommand();
             Comando.Connection = conexion.openDataBase();
@@ -22,7 +23,7 @@ namespace DataAccessLayer.Restaurante
             Comando.CommandType = CommandType.StoredProcedure;
 
             Comando.CommandText = "sp_selectCatCliente";
-            catCliente _catClient = new catCliente();
+            CatCliente _catClient = new CatCliente();
             _catClient.CatUser = "Seleccione";
 
             listacatCliente.Add(_catClient);
@@ -32,7 +33,7 @@ namespace DataAccessLayer.Restaurante
                 IDataReader lector = Comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    catCliente _catCli = new catCliente();
+                    CatCliente _catCli = new CatCliente();
                     _catCli.Id = int.Parse(lector[0].ToString());
                     _catCli.CatUser = lector[1].ToString();
                     listacatCliente.Add(_catCli);
@@ -46,7 +47,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listacatCliente;

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using BusinessEntities.Restaurante;
+using DataAccessLayer.Restaurante;
+using DataAccessLayer.baseDatos;
 
 namespace DataAccessLayer.Restaurante
 {
@@ -28,11 +29,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -65,11 +66,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -82,7 +83,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean altaOrdenTipoMesaLocal(mesa _mesa, clienteFrecuent _cliente, usuario _Personal)
+        public Boolean altaOrdenTipoMesaLocal(mesa _mesa, clienteFrecuente _cliente, usuario _Personal)
         {
 
             int insertar = 0;
@@ -100,11 +101,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -117,7 +118,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean altaOrdenParaLlevar(string observacion, clienteFrecuent _cliente, usuario _Personal)
+        public Boolean altaOrdenParaLlevar(string observacion, clienteFrecuente _cliente, usuario _Personal)
         {
 
             int insertar = 0;
@@ -135,11 +136,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -155,5 +156,4 @@ namespace DataAccessLayer.Restaurante
 
     }
 }
-    }
-}
+    

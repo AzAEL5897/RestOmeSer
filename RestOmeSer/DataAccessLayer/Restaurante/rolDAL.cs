@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using BusinessEntities.Restaurante;
+using DataAccessLayer.baseDatos;
+using DataAccessLayer.Restaurante;
 
 namespace DataAccessLayer.Restaurante
 {
     class rolDAL
     {
         conexion conexion = new conexion();
-        public List<roles> seleccionarCatProducto()
+        public List<rol> seleccionarCatProducto()
         {
-            List<roles> listaRol = new List<roles>();
+            List<rol> listaRol = new List<rol>();
 
             SqlCommand Comando = new SqlCommand();
             Comando.Connection = conexion.openDataBase();
@@ -22,7 +23,7 @@ namespace DataAccessLayer.Restaurante
             Comando.CommandType = CommandType.StoredProcedure;
 
             Comando.CommandText = "sp_selectRol";
-            roles _roll = new roles();
+            rol _roll = new rol();
             _roll.Roluser = "Seleccione";
 
             listaRol.Add(_roll);
@@ -32,7 +33,7 @@ namespace DataAccessLayer.Restaurante
                 IDataReader lector = Comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    roles _rol = new roles();
+                    rol _rol = new rol();
                     _rol.Id = int.Parse(lector[0].ToString());
                     _rol.Roluser = lector[1].ToString();
                     listaRol.Add(_rol);
@@ -46,12 +47,11 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listaRol;
         }
     }
 }
-    }
-}
+    

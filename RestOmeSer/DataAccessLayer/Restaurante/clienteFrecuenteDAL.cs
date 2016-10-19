@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using BusinessEntities.Restaurante;
+using DataAccessLayer.Restaurante;
+using DataAccessLayer.baseDatos;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace DataAccessLayer.Restaurante
     class clienteFrecuenteDAL
     {
         conexion conexion = new conexion();
-        public Boolean altaClienteFrecuente(clienteFrecuent _clientFrecu)
+        public Boolean altaClienteFrecuente(clienteFrecuente _clientFrecu)
         {
 
             int insertar = 0;
@@ -33,11 +34,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -49,7 +50,7 @@ namespace DataAccessLayer.Restaurante
         }
 
 
-        public Boolean eliminarClienteFre(clienteFrecuent _cF)
+        public Boolean eliminarClienteFre(clienteFrecuente _cF)
         {
 
             int elininar = 0;
@@ -66,11 +67,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -100,16 +101,16 @@ namespace DataAccessLayer.Restaurante
                     Console.WriteLine(reader.GetString(0));
                 }
                 //  txt1.AutoCompleteCustomSource = MyCollection;
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 return MyCollection;
             }
         }
 
 
 
-        public List<clienteFrecuent> seleccionarCliente()
+        public List<clienteFrecuente> seleccionarCliente()
         {
-            List<clienteFrecuent> listClienteFrecente = new List<clienteFrecuent>();
+            List<clienteFrecuente> listClienteFrecente = new List<clienteFrecuente>();
 
             SqlCommand Comando = new SqlCommand();
             Comando.Connection = conexion.openDataBase();
@@ -117,7 +118,7 @@ namespace DataAccessLayer.Restaurante
             Comando.CommandType = CommandType.StoredProcedure;
 
             Comando.CommandText = "sp_selectCliente";
-            clienteFrecuent _clifcnt = new clienteFrecuent();
+            clienteFrecuente _clifcnt = new clienteFrecuente();
             _clifcnt.Nombe = "Cliente";
 
             listClienteFrecente.Add(_clifcnt);
@@ -127,7 +128,7 @@ namespace DataAccessLayer.Restaurante
                 IDataReader lector = Comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    clienteFrecuent _clienteFr = new clienteFrecuent();
+                    clienteFrecuente _clienteFr = new clienteFrecuente();
                     _clienteFr.Id = int.Parse(lector[0].ToString());
                     _clienteFr.Nombe = lector[1].ToString();
                     listClienteFrecente.Add(_clienteFr);
@@ -141,7 +142,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listClienteFrecente;
@@ -151,5 +152,4 @@ namespace DataAccessLayer.Restaurante
     }
 }
 
-    }
-}
+    

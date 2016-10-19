@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
 using System.Data.SqlClient;
 using System.Data;
+using DataAccessLayer.baseDatos;
+using DataAccessLayer.Restaurante;
+using BusinessEntities.Restaurante;
 using System.Windows.Forms;
 namespace DataAccessLayer.Restaurante
 {
@@ -46,7 +47,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return usuario;
@@ -72,11 +73,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -105,11 +106,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -156,7 +157,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listPersonal;
@@ -164,5 +165,4 @@ namespace DataAccessLayer.Restaurante
 
     }
 }
-    }
-}
+    

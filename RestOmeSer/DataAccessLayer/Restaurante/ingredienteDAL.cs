@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using DataAccessLayer.baseDatos;
+using BusinessEntities.Restaurante;
+
 
 namespace DataAccessLayer.Restaurante
 {
@@ -44,7 +45,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return productDataSet;
@@ -53,7 +54,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean altaIngrediente(ingredientes _ingrediente)
+        public Boolean altaIngrediente(ingrediente _ingrediente)
         {
 
             int insertar = 0;
@@ -70,11 +71,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -87,7 +88,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean eliminarIngrediente(ingredientes _ingrediente)
+        public Boolean eliminarIngrediente(ingrediente _ingrediente)
         {
 
             int elininar = 0;
@@ -104,11 +105,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -122,7 +123,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public DataSet SelectIngredintesDeProducto(ingredientes _ingrediente)
+        public DataSet SelectIngredintesDeProducto(ingrediente _ingrediente)
         {
             DataSet productDataSet = new DataSet();
 
@@ -154,7 +155,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return productDataSet;
@@ -166,5 +167,4 @@ namespace DataAccessLayer.Restaurante
     }
 }
 
-    }
-}
+    

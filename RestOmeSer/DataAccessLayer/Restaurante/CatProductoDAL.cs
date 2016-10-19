@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using DataAccessLayer.baseDatos;
+using BusinessEntities.Restaurante;
+
 
 namespace DataAccessLayer.Restaurante
 {
@@ -46,7 +47,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listaCtProducto;
@@ -54,5 +55,4 @@ namespace DataAccessLayer.Restaurante
     }
 }
 
-    }
-}
+    

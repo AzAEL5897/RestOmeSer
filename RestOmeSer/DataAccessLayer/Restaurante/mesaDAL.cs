@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
 using System.Windows.Forms;
+using BusinessEntities.Restaurante;
+using DataAccessLayer.baseDatos;
+using DataAccessLayer.Restaurante;
 
 namespace DataAccessLayer.Restaurante
 {
@@ -53,7 +54,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return arraymesas;
@@ -94,7 +95,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listMesasDisponibles;
@@ -138,14 +139,14 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listMesasDisponibles;
         }
 
 
-        public Boolean ReservarMesa(mesa _mesa, string fecha, clienteFrecuent _clieF)
+        public Boolean ReservarMesa(mesa _mesa, string fecha, clienteFrecuente _clieF)
         {
 
             int insertar = 0;
@@ -164,11 +165,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -199,11 +200,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -218,5 +219,4 @@ namespace DataAccessLayer.Restaurante
     }
 }
 
-    }
-}
+    

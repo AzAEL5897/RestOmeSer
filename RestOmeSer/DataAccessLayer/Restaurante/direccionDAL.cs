@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using DataAccessLayer.baseDatos;
+using DataAccessLayer.Restaurante;
+using BusinessEntities.Restaurante;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
@@ -33,11 +34,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }

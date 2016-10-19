@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using sistemaRestaurante.baseDatos;
-using sistemaRestaurante.modelo;
+using BusinessEntities.Restaurante;
+using DataAccessLayer.Restaurante;
+using DataAccessLayer.baseDatos;
 
 namespace DataAccessLayer.Restaurante
 {
@@ -44,16 +45,16 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return productDataSet;
         }
 
 
-        public List<productos> seleccionarProductoComb()
+        public List<producto> seleccionarProductoComb()
         {
-            List<productos> listaCtProducto = new List<productos>();
+            List<producto> listaCtProducto = new List<producto>();
 
             SqlCommand Comando = new SqlCommand();
             Comando.Connection = conexion.openDataBase();
@@ -61,7 +62,7 @@ namespace DataAccessLayer.Restaurante
             Comando.CommandType = CommandType.StoredProcedure;
 
             Comando.CommandText = "sp_selectProductosCombo";
-            productos _catP = new productos();
+            producto _catP = new producto();
             _catP.NombreProducto = "Seleccione";
 
             listaCtProducto.Add(_catP);
@@ -71,7 +72,7 @@ namespace DataAccessLayer.Restaurante
                 IDataReader lector = Comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    productos _catProduto = new productos();
+                    producto _catProduto = new producto();
                     _catProduto.Id = int.Parse(lector[0].ToString());
                     _catProduto.NombreProducto = lector[1].ToString();
                     listaCtProducto.Add(_catProduto);
@@ -85,7 +86,7 @@ namespace DataAccessLayer.Restaurante
 
             finally
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
 
             return listaCtProducto;
@@ -93,7 +94,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean altaDetalleProductoIngredientes(productos _producto, ingredientes _ingrediente)
+        public Boolean altaDetalleProductoIngredientes(producto _producto, ingrediente _ingrediente)
         {
 
             int insertar = 0;
@@ -114,11 +115,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -130,7 +131,7 @@ namespace DataAccessLayer.Restaurante
         }
 
 
-        public Boolean altaProducto(productos _producto, CatProducto _CatProduc)
+        public Boolean altaProducto(producto _producto, CatProducto _CatProduc)
         {
 
             int insertar = 0;
@@ -150,11 +151,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -168,7 +169,7 @@ namespace DataAccessLayer.Restaurante
 
 
 
-        public Boolean eliminarProducto(productos _producto)
+        public Boolean eliminarProducto(producto _producto)
         {
 
             int elininar = 0;
@@ -185,11 +186,11 @@ namespace DataAccessLayer.Restaurante
                 {
                     respuesta = true;
                 }
-                conexion.closeDatabase();
+                conexion.closeDataBase();
             }
             catch (Exception)
             {
-                conexion.closeDatabase();
+                conexion.closeDataBase();
                 throw;
 
             }
@@ -203,5 +204,4 @@ namespace DataAccessLayer.Restaurante
     }
 }
 
-    }
-}
+    
