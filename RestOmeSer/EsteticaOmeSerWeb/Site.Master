@@ -80,7 +80,7 @@
                             <li><a href="cortes de cabello.html">Cortes De Cabello</a></li>
                             <li><a href="Link De Descarga La APP.html">Link De Descarga La APP (Aplicacion)</a></li>
                            
-                         <li>   <a href=login.php>Salir </a>
+                         <li>   <a href=login.html>Salir </a>
 						 
                         </ul>
                     </nav>
@@ -145,13 +145,6 @@
                     </div>
                 </article>
                 <article class="column-2">
-                	<div class="maxheight indent-bot">
-                        <h3 class="p1">Acerca de la Aplicacion</h3>
-                   <h6 class = "p2"> Barberia Estetica <a class="color-3" href="http://blog.templatemonster.com/free-website-templates/" plantillas de sitio web gratuito de La Barberia Estetica... target="_blank"> < / a> creado por el equipo de Omega Server Esta plantilla de página web está optimizado para una resolución de 1280x1024 pantalla. También es XHTML & amp; CSS válid. </ h6>
-.
-                       <P class = "p2"> Este <a href = "http://blog.templatemonster.com/2012/01/23/free-website-template-jquery-slider-food-delivery-project/" target = " _blank "> Plantilla Catering </a> va con dos paquetes - con los archivos PSD fuente y sin ellos. los archivos PSD fuente están disponibles de forma gratuita para los usuarios registrados de Omega Server El paquete básico (sin fuente PSD) está disponible para cualquier persona sin necesidad de registro. </ P>
-                        
-                    </div>  
                     <a class="button-2" href="Link De Descarga La APP.html">Descarga Nuestra Applicacion</a>
                 </article>
             </div>

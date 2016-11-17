@@ -220,6 +220,7 @@
     <Content Include="IMG-20161111-WA0000.jpg" />
     <Content Include="IMG-20161111-WA0001.jpg" />
     <Content Include="Link De Descarga La APP.html" />
+    <Content Include="login.html" />
     <Content Include="logo.png" />
     <Content Include="Manicure-pedicure.html" />
     <Content Include="Manicure.html" />
@@ -230,7 +231,6 @@
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="login.php" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="obj\Debug\EsteticaOmeSerWeb.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\EsteticaOmeSerWeb.dll" />
