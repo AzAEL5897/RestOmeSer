@@ -60,16 +60,6 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
-      <Project>{bbf48190-1946-4275-9847-e2ce10f76b92}</Project>
-      <Name>BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{e9da9a7c-3fc2-4a39-9cc7-74181b960f59}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
